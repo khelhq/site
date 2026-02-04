@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-newsreader);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  /* Dark mode default as requested for "intimidatingly clear" */
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  /* Muted electric blue accent - visible but sparse */
+  --accent: #3b82f6; 
+}
+
+/* Light mode override if needed, but sticking to dark for now based on "manifesto" vibe. 
+   If user wants light, they can toggle system pref, but I'll force consistent Swiss dark for the vibe.
+   actually, let's support both properly.
+*/
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    --accent: #2563eb;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Noise Texture Utility */
+.noise-bg {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Utility for the "manifesto" voice */
+.font-manifesto {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
