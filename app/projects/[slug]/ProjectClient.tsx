@@ -71,12 +71,6 @@ export default function ProjectClient({ project }: { project: Project }) {
   return (
     <main ref={containerRef} className="min-h-screen bg-[#111111] text-[#ededed] font-sans selection:bg-[#d4ff90] selection:text-black">
       <div className="max-w-6xl mx-auto px-6 pt-[12vh] pb-16 md:pb-32">
-        {/* Navigation */}
-        <div className="nav-back mb-16">
-          <Link href="/" className="text-sm font-mono tracking-widest uppercase hover:text-[#d4ff90] transition-colors inline-flex items-center gap-2">
-            <span className="text-xl leading-none">&larr;</span> Back to Work
-          </Link>
-        </div>
 
         {/* Hero Section */}
         <section className="mb-16 md:mb-24">
