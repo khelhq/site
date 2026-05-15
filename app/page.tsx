@@ -47,7 +47,7 @@ export default function Home() {
 
   return (
     <main ref={containerRef} className="min-h-screen bg-[#111111] text-[#ededed] font-sans selection:bg-[#d4ff90] selection:text-black">
-      <div className="max-w-5xl mx-auto px-6 pt-[22vh] pb-32">
+      <div className="max-w-5xl mx-auto px-6 pt-[22vh] pb-8 md:pb-16">
         <section className="max-w-4xl">
           <p className="hero-text text-[28px] sm:text-[36px] md:text-[42px] leading-[1.3] font-medium tracking-tight text-[#ededed]">
             We are a strategic design and technology studio dedicated to engineering best-in-class digital products. We don't just build; we invest knowledge to transcend expectations.
@@ -55,7 +55,7 @@ export default function Home() {
         </section>
 
         {/* Projects Section */}
-        <section className="mt-24 md:mt-32 mb-24 md:mb-32 w-full flex flex-col gap-8 md:gap-16 project-grid">
+        <section className="mt-24 md:mt-32 w-full flex flex-col gap-8 md:gap-16 project-grid">
           <div className="w-full">
             <ProjectCard
               title="Air Studios"
