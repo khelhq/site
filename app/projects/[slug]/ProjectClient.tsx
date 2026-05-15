@@ -73,7 +73,7 @@ export default function ProjectClient({ project }: { project: Project }) {
       <div className="max-w-6xl mx-auto px-6 pt-[12vh] pb-16 md:pb-32">
 
         {/* Hero Section */}
-        <section className="mb-16 md:mb-24">
+        <section className="mb-32 md:mb-24">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-12">
             <div className="overflow-hidden">
               <h1 className="hero-title text-[40px] sm:text-[60px] md:text-[80px] lg:text-[100px] leading-[1] font-manifesto uppercase text-[#ededed]">
