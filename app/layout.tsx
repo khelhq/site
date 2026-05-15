@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Newsreader } from "next/font/google";
+import { Manrope, Geist_Mono, Newsreader } from "next/font/google";
 import "./globals.css";
 import SmoothScroller from "@/components/SmoothScroller";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
 
@@ -20,7 +22,7 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "Systems, Not Services",
+  title: "Khel",
   description: "I build small, boring systems that capture leads, respond instantly, and remove manual work.",
 };
 
@@ -32,11 +34,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${newsreader.variable} antialiased bg-background text-foreground relative overflow-x-hidden selection:bg-accent/20 selection:text-accent`}
+        className={`${manrope.variable} ${geistMono.variable} ${newsreader.variable} antialiased bg-background text-foreground relative overflow-x-hidden selection:bg-accent/20 selection:text-accent`}
       >
         <SmoothScroller>
           <div className="fixed inset-0 z-50 pointer-events-none opacity-[0.04] mix-blend-overlay noise-bg"></div>
+          <Navbar />
           {children}
+          <Footer />
         </SmoothScroller>
       </body>
     </html >
