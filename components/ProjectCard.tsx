@@ -1,16 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProjectCardProps {
   title: string;
   category: string;
   imageUrl: string;
   imageClassName?: string;
+  href?: string;
 }
 
-export default function ProjectCard({ title, category, imageUrl, imageClassName }: ProjectCardProps) {
-  return (
+export default function ProjectCard({ title, category, imageUrl, imageClassName, href }: ProjectCardProps) {
+  const content = (
     <div className="w-full flex flex-col group cursor-pointer">
       <div className="relative w-full aspect-[4/3] md:aspect-[16/9] rounded-xl overflow-hidden bg-neutral-900 border border-white/5">
         <Image
@@ -30,4 +32,10 @@ export default function ProjectCard({ title, category, imageUrl, imageClassName 
       </div>
     </div>
   );
+
+  if (href) {
+    return <Link href={href} className="w-full block">{content}</Link>;
+  }
+
+  return content;
 }

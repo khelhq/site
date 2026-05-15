@@ -11,29 +11,52 @@ export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    // Split the text into lines
-    const split = new SplitType(".hero-text", { types: "lines" });
-    
-    // Wrap each line in an overflow-hidden container for the masking effect
-    split.lines?.forEach((line) => {
-      const wrapper = document.createElement("div");
-      wrapper.className = "overflow-hidden inline-block w-full";
-      line.parentNode?.insertBefore(wrapper, line);
-      wrapper.appendChild(line);
-    });
+    let split: SplitType;
 
-    // Animate lines up from 100% 
-    gsap.from(split.lines, {
+    const initSplit = () => {
+      split = new SplitType(".hero-text", { types: "lines" });
+      split.lines?.forEach((line) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "line-mask overflow-hidden";
+        line.parentNode?.insertBefore(wrapper, line);
+        wrapper.appendChild(line);
+      });
+    };
+
+    initSplit();
+
+    gsap.from(split!.lines, {
       y: "100%",
       duration: 1.2,
       ease: "power4.out",
       stagger: 0.08,
       delay: 0.2,
-      onComplete: () => {
-        // Revert to original text after animation for proper responsive resizing
-        split.revert();
-      }
     });
+
+    const handleResize = () => {
+      const wrappers = document.querySelectorAll('.line-mask');
+      wrappers.forEach(w => {
+        if (w.parentNode) {
+          while (w.firstChild) w.parentNode.insertBefore(w.firstChild, w);
+          w.parentNode.removeChild(w);
+        }
+      });
+      split.revert();
+      initSplit();
+    };
+
+    let resizeTimer: NodeJS.Timeout;
+    const onResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(handleResize, 100);
+    };
+
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      window.removeEventListener('resize', onResize);
+      split.revert();
+    };
 
     gsap.from(".project-grid > div", {
       y: 60,
@@ -62,6 +85,7 @@ export default function Home() {
               category="Website"
               imageUrl="/Mockkup.jpg"
               imageClassName="scale-[1.15] group-hover:scale-[1.20]"
+              href="/projects/air-studios"
             />
           </div>
           <div className="w-full">
@@ -69,6 +93,7 @@ export default function Home() {
               title="Muzeyi Yelyen - Portofolio 25"
               category="Website"
               imageUrl="/Mockkupv2.jpg"
+              href="/projects/muzeyi-yelyen"
             />
           </div>
         </section>
