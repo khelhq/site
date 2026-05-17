@@ -73,7 +73,7 @@ export default function Home() {
       <div className="max-w-5xl mx-auto px-6 pt-[22vh] pb-8 md:pb-16">
         <section className="max-w-4xl">
           <p className="hero-text text-[28px] sm:text-[36px] md:text-[42px] leading-[1.3] font-medium tracking-tight text-[#ededed]">
-            We are a strategic design and technology studio dedicated to engineering best-in-class digital products. We don't just build; we invest knowledge to transcend expectations.
+            We design and engineer high-performance digital products for scaling brands.
           </p>
         </section>
 
