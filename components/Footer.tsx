@@ -40,24 +40,26 @@ export default function Footer() {
                             </nav>
                         </div>
                         <div className="space-y-6">
-                            <h4 className="text-[11px] font-medium text-neutral-500 uppercase tracking-[0.2em]">Connect</h4>
-                            <nav className="flex flex-col gap-3">
-                                {[
-                                    { label: "LinkedIn", href: "#" },
-                                    { label: "Twitter", href: "#" },
-                                    { label: "Instagram", href: "#" }
-                                ].map((link) => (
-                                    <a
-                                        key={link.label}
-                                        href={link.href}
-                                        className="text-neutral-300 hover:text-white transition-colors duration-300 text-[14px] flex items-center gap-1 group"
-                                    >
-                                        {link.label}
-                                        <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
-                                    </a>
-                                ))}
-                            </nav>
-                        </div>
+    <h4 className="text-[11px] font-medium text-neutral-500 uppercase tracking-[0.2em]">Connect</h4>
+    <nav className="flex flex-col gap-3">
+        {[
+            { label: "LinkedIn", href: "#" },
+            { label: "Twitter", href: "#" },
+            { label: "WhatsApp", href: "https://wa.me/233558161835" },
+            { label: "Call", href: "tel:+233558161835" }
+        ].map((link) => (
+            <a
+                key={link.label}
+                href={link.href}
+                className="text-neutral-300 hover:text-white transition-colors duration-300 text-[14px] flex items-center gap-1 group"
+            >
+                {link.label}
+                <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
+            </a>
+        ))}
+    </nav>
+</div>
+
                     </div>
                 </div>
 
