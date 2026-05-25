@@ -23,14 +23,25 @@ export default function Home() {
       });
     };
 
-    initSplit();
+    document.fonts.ready.then(() => {
+      initSplit();
 
-    gsap.from(split!.lines, {
-      y: "100%",
-      duration: 1.2,
-      ease: "power4.out",
-      stagger: 0.08,
-      delay: 0.2,
+      gsap.from(split!.lines, {
+        y: "100%",
+        duration: 1.2,
+        ease: "power4.out",
+        stagger: 0.08,
+        delay: 0.2,
+      });
+
+      gsap.from(".project-grid > div", {
+        y: 60,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        delay: 0.6,
+        stagger: 0.2,
+      });
     });
 
     const handleResize = () => {
@@ -41,7 +52,7 @@ export default function Home() {
           w.parentNode.removeChild(w);
         }
       });
-      split.revert();
+      split?.revert();
       initSplit();
     };
 
@@ -55,17 +66,8 @@ export default function Home() {
 
     return () => {
       window.removeEventListener('resize', onResize);
-      split.revert();
+      split?.revert();
     };
-
-    gsap.from(".project-grid > div", {
-      y: 60,
-      opacity: 0,
-      duration: 1.2,
-      ease: "power3.out",
-      delay: 0.6,
-      stagger: 0.2,
-    });
   }, { scope: containerRef });
 
   return (
