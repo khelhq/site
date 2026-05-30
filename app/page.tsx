@@ -102,7 +102,12 @@ export default function Home() {
       ScrollTrigger.refresh();
     }, 200);
 
+    let lastWidth = typeof window !== "undefined" ? window.innerWidth : 0;
     const handleResize = () => {
+      const currentWidth = window.innerWidth;
+      if (currentWidth === lastWidth) return;
+      lastWidth = currentWidth;
+
       const wrappers = document.querySelectorAll('.line-mask');
       wrappers.forEach(w => {
         if (w.parentNode) {

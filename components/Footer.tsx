@@ -47,7 +47,7 @@ export default function Footer() {
                             <h4 className="text-[11px] font-medium text-neutral-500 uppercase tracking-[0.2em]">Connect</h4>
                             <nav className="flex flex-col gap-3">
                                 {[
-                                    { label: "LinkedIn", href: "https://linkedin.com", isExternal: true },
+                                    { label: "LinkedIn", href: "https://www.linkedin.com/company/khel-technologies/", isExternal: true },
                                     { label: "Instagram", href: "https://instagram.com", isExternal: true },
                                     { label: "X", href: "https://x.com", isExternal: true },
                                     { label: "WhatsApp", href: "https://wa.me/233558161835", isExternal: true },
