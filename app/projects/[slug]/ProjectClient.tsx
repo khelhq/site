@@ -69,7 +69,7 @@ export default function ProjectClient({ project }: { project: Project }) {
 
   return (
     <main ref={containerRef} className="min-h-screen bg-[#111111] text-[#ededed] font-sans selection:bg-[#d4ff90] selection:text-black">
-      <div className="max-w-5xl mx-auto px-6 pt-[12vh] pb-16 md:pb-32">
+      <div className="max-w-5xl mx-auto px-6 pt-[22vh] pb-16 md:pb-32">
 
         {/* Navigation */}
         <div className="nav-back mb-16 flex justify-between items-center">
