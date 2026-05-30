@@ -9,6 +9,16 @@ export type Project = {
   solution: string;
   gallery: string[];
   liveUrl?: string;
+
+  // New fields for slug spec
+  client: string;
+  timeline: string;
+  whatWeBuilt: string;
+  problem: string;
+  approach: string;
+  outcome: string;
+  nextProjectSlug: string;
+  nextProjectTitle: string;
 };
 
 export const projects: Project[] = [
@@ -25,7 +35,15 @@ export const projects: Project[] = [
       "/Mockkup.jpg",
       "/Mockkup.jpg"
     ],
-    liveUrl: "https://www.airstudios.world/"
+    liveUrl: "https://www.airstudios.world/",
+    client: "Air Studios",
+    timeline: "8 Weeks / Q1 2025",
+    whatWeBuilt: "Interactive Brand Site, Custom Illustration Engine, Digital Portfolio",
+    problem: "Air Studios needed a digital presence that lived up to their high-tier visual storytelling. Their previous website was a rigid, template-based grid that flattened their illustrations and failed to capture the cinematic, fluid nature of their visual projects.",
+    approach: "Our design philosophy was built on motion and play. Instead of locking their work into standard grid layouts, we created a fluid canvas where elements feel in constant motion. We integrated GSAP scroll triggers and dynamic webGL-inspired filters, allowing their illustrations to scale and animate organically as users interact with the page. We made the choice to use an intimidatingly clear black backdrop to amplify the vibrant, custom color palettes of their art style.",
+    outcome: "We shipped a bespoke portfolio platform that resulted in a 40% increase in inbound inquiries within the first month of launch. Qualitatively, it elevated Air Studios from a regional creative studio to a globally recognized digital production brand, leading to high-profile collaborations with international agencies.",
+    nextProjectSlug: "muzeyi-yelyen",
+    nextProjectTitle: "Muzeyi Yelyen"
   },
   {
     slug: "muzeyi-yelyen",
@@ -40,7 +58,15 @@ export const projects: Project[] = [
       "/Mockkupv2.jpg",
       "/Mockkupv2.jpg"
     ],
-    liveUrl: "https://muzeyi-portfolio.vercel.app/"
+    liveUrl: "https://muzeyi-portfolio.vercel.app/",
+    client: "Muzeyi Yelyen",
+    timeline: "6 Weeks / Q2 2025",
+    whatWeBuilt: "Minimal Portfolio, Creative Storytelling Platform",
+    problem: "Muzeyi Yelyen needed a personal portfolio that felt personal. Traditional portfolio templates felt too sterile and commercial, failing to reflect his deeply organic, storytelling-driven design philosophy and personal writing voice.",
+    approach: "We stripped away all unnecessary visual noise, opting for an ultra-minimalist design system with raw typographic accents and smooth, high-fidelity transitions. We treated each page load as the opening of a book, designing custom text-reveal entry animations that ease the user into the narrative. We chose to focus on micro-interactions, making sure the portfolio remains entirely unobtrusive so that the illustration work remains the primary focal point of the browser.",
+    outcome: "Shipped a highly personalized portfolio featured on multiple visual design inspiration sites. Muzeyi reported a massive qualitative shift: clients now approach him with a clear understanding of his storytelling methodology, leading to highly aligned, higher-value commissions.",
+    nextProjectSlug: "air-studios",
+    nextProjectTitle: "Air Studios"
   }
 ];
 
