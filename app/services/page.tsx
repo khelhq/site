@@ -1,7 +1,16 @@
 "use client";
 
 import { useRef } from "react";
-import { ArrowUpRight } from "lucide-react";
+import {
+  ArrowUpRight,
+  Globe,
+  Layers,
+  Wrench,
+  Sparkles,
+  MailCheck,
+  Target,
+  RefreshCw,
+} from "lucide-react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -28,12 +37,31 @@ export default function ServicesPage() {
         delay: 0.5,
       });
 
+      // Animated icons entrance
+      gsap.from(".service-icon", {
+        scale: 0,
+        opacity: 0,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        stagger: 0.1,
+        delay: 0.6,
+      });
+
       gsap.from(".engage-section", {
         y: 30,
         opacity: 0,
         duration: 1,
         ease: "power3.out",
         delay: 0.9,
+      });
+
+      gsap.from(".engage-icon", {
+        scale: 0,
+        opacity: 0,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        stagger: 0.15,
+        delay: 1.0,
       });
 
       gsap.from(".cta-section", {
@@ -61,6 +89,29 @@ export default function ServicesPage() {
       ref={containerRef}
       className="min-h-screen bg-[#111111] text-[#ededed] font-sans selection:bg-[#d4ff90] selection:text-black"
     >
+      {/* Floating icon animation */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-6px); }
+        }
+        .icon-float {
+          animation: float 4s ease-in-out infinite;
+        }
+        .icon-float-delay-1 {
+          animation: float 4s ease-in-out 0.5s infinite;
+        }
+        .icon-float-delay-2 {
+          animation: float 4s ease-in-out 1s infinite;
+        }
+        .icon-float-delay-3 {
+          animation: float 4s ease-in-out 1.5s infinite;
+        }
+        .icon-float-delay-4 {
+          animation: float 4s ease-in-out 2s infinite;
+        }
+      `}</style>
+
       <div className="max-w-5xl mx-auto px-6 pt-[22vh] pb-24 md:pb-32">
         {/* Header */}
         <section className="mb-16 md:mb-24">
@@ -69,7 +120,7 @@ export default function ServicesPage() {
             <span className="text-[11px] font-medium text-neutral-500 uppercase tracking-[0.2em]">Services</span>
           </div>
           <h1 className="services-heading text-[32px] sm:text-[48px] md:text-[60px] font-sans font-medium tracking-tight leading-[1.1] text-white max-w-2xl lowercase">
-            we work across three areas. everything we do connects design thinking with engineering.
+            we work across five areas. everything we do connects design thinking with engineering.
           </h1>
         </section>
 
@@ -78,11 +129,13 @@ export default function ServicesPage() {
 
           {/* Service 1 */}
           <div className="services-item flex flex-col">
-            <h2 className="text-white text-[28px] sm:text-[34px] font-sans font-medium leading-[1.05] tracking-tight mb-6 lowercase">
+            <div className="service-icon w-12 h-12 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center justify-center mb-6 icon-float">
+              <Globe className="w-5 h-5 text-[#d4ff90]" strokeWidth={1.5} />
+            </div>
+            <h2 className="text-neutral-100 text-[28px] sm:text-[34px] font-sans font-light leading-[1.1] tracking-tight mb-8 lowercase">
               web & brand<br />websites
             </h2>
-
-            <ul className="space-y-2.5 text-[16px] sm:text-[18px] font-normal text-neutral-200">
+            <ul className="space-y-3 text-[15px] sm:text-[16px] font-light text-neutral-400">
               <li>Brand Development</li>
               <li>Custom Web Design</li>
               <li>CMS Setup & Integration</li>
@@ -92,11 +145,13 @@ export default function ServicesPage() {
 
           {/* Service 2 */}
           <div className="services-item flex flex-col">
-            <h2 className="text-white text-[28px] sm:text-[34px] font-sans font-medium leading-[1.05] tracking-tight mb-6 lowercase">
+            <div className="service-icon w-12 h-12 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center justify-center mb-6 icon-float-delay-1">
+              <Layers className="w-5 h-5 text-[#d4ff90]" strokeWidth={1.5} />
+            </div>
+            <h2 className="text-neutral-100 text-[28px] sm:text-[34px] font-sans font-light leading-[1.1] tracking-tight mb-8 lowercase">
               web apps<br />& saas products
             </h2>
-
-            <ul className="space-y-2.5 text-[16px] sm:text-[18px] font-normal text-neutral-200">
+            <ul className="space-y-3 text-[15px] sm:text-[16px] font-light text-neutral-400">
               <li>Product Scoping & Strategy</li>
               <li>UX/UI Layout Design</li>
               <li>Full-stack Web Engineering</li>
@@ -106,15 +161,56 @@ export default function ServicesPage() {
 
           {/* Service 3 */}
           <div className="services-item flex flex-col">
-            <h2 className="text-white text-[28px] sm:text-[34px] font-sans font-medium leading-[1.05] tracking-tight mb-6 lowercase">
+            <div className="service-icon w-12 h-12 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center justify-center mb-6 icon-float-delay-2">
+              <Wrench className="w-5 h-5 text-[#d4ff90]" strokeWidth={1.5} />
+            </div>
+            <h2 className="text-neutral-100 text-[28px] sm:text-[34px] font-sans font-light leading-[1.1] tracking-tight mb-8 lowercase">
               custom software<br />& digital tools
             </h2>
-
-            <ul className="space-y-2.5 text-[16px] sm:text-[18px] font-normal text-neutral-200">
+            <ul className="space-y-3 text-[15px] sm:text-[16px] font-light text-neutral-400">
               <li>Technical Scoping & Analysis</li>
               <li>Scalable Software Architecture</li>
               <li>Custom Dashboard Build</li>
               <li>Full Handoff or Ongoing Support</li>
+            </ul>
+          </div>
+
+        </section>
+
+        <div className="divider-line w-full h-px bg-neutral-800 my-16 md:my-24" />
+
+        {/* New Services Row: AI + Google Workspace */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+
+          {/* Service 4 */}
+          <div className="services-item flex flex-col">
+            <div className="service-icon w-12 h-12 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center justify-center mb-6 icon-float-delay-3">
+              <Sparkles className="w-5 h-5 text-[#d4ff90]" strokeWidth={1.5} />
+            </div>
+            <h2 className="text-neutral-100 text-[28px] sm:text-[34px] font-sans font-light leading-[1.1] tracking-tight mb-8 lowercase">
+              ai<br />automations
+            </h2>
+            <ul className="space-y-3 text-[15px] sm:text-[16px] font-light text-neutral-400">
+              <li>AI Chatbot & Assistant Setup</li>
+              <li>Automated Lead Capture & Response</li>
+              <li>Workflow Automation (n8n, Make, Zapier)</li>
+              <li>Custom AI Integrations & Agents</li>
+            </ul>
+          </div>
+
+          {/* Service 5 */}
+          <div className="services-item flex flex-col">
+            <div className="service-icon w-12 h-12 rounded-xl bg-white/[0.04] border border-white/[0.06] flex items-center justify-center mb-6 icon-float-delay-4">
+              <MailCheck className="w-5 h-5 text-[#d4ff90]" strokeWidth={1.5} />
+            </div>
+            <h2 className="text-neutral-100 text-[28px] sm:text-[34px] font-sans font-light leading-[1.1] tracking-tight mb-8 lowercase">
+              google workspace<br />automations
+            </h2>
+            <ul className="space-y-3 text-[15px] sm:text-[16px] font-light text-neutral-400">
+              <li>Google Apps Script Development</li>
+              <li>Sheets, Forms & Drive Automations</li>
+              <li>Gmail & Calendar Integrations</li>
+              <li>Custom Workspace Add-ons</li>
             </ul>
           </div>
 
@@ -131,18 +227,24 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 max-w-3xl">
             <div className="flex flex-col">
-              <h3 className="text-white text-[20px] sm:text-[22px] font-sans font-medium tracking-tight mb-3 lowercase">
+              <div className="engage-icon w-10 h-10 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center mb-5 icon-float">
+                <Target className="w-4 h-4 text-[#d4ff90]" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-neutral-100 text-[20px] sm:text-[22px] font-sans font-light tracking-tight mb-4 lowercase">
                 project-based
               </h3>
-              <p className="text-neutral-200 text-[16px] sm:text-[18px] leading-relaxed font-normal">
+              <p className="text-neutral-400 text-[15px] sm:text-[16px] leading-[1.7] font-light">
                 Scoped work with a fixed deliverable. Ideal for clean, defined launches, brand redesigns, or scoping initial product releases.
               </p>
             </div>
             <div className="flex flex-col">
-              <h3 className="text-white text-[20px] sm:text-[22px] font-sans font-medium tracking-tight mb-3 lowercase">
+              <div className="engage-icon w-10 h-10 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center mb-5 icon-float-delay-1">
+                <RefreshCw className="w-4 h-4 text-[#d4ff90]" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-neutral-100 text-[20px] sm:text-[22px] font-sans font-light tracking-tight mb-4 lowercase">
                 ongoing retainer
               </h3>
-              <p className="text-neutral-200 text-[16px] sm:text-[18px] leading-relaxed font-normal">
+              <p className="text-neutral-400 text-[15px] sm:text-[16px] leading-[1.7] font-light">
                 Retainer or build partner relationship. Ideal for scaling products, continuous feature refinement, and ongoing technical advisory.
               </p>
             </div>
