@@ -53,7 +53,7 @@ export default function WorkPage() {
         </section>
 
         {/* Projects Grid */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 work-grid">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 work-grid">
           {projects.map((project) => (
             <div key={project.slug}>
               <ProjectCard

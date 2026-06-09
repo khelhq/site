@@ -145,10 +145,18 @@ export default function Home() {
         </section>
 
         {/* Projects Section */}
-        <section id="work" className="mt-24 md:mt-32 w-full flex flex-col gap-8 md:gap-12 project-grid">
+        <section id="work" className="mt-24 md:mt-32 w-full flex flex-col gap-3 md:gap-4 project-grid">
           <div className="flex items-center gap-2 mb-4">
             <span className="w-4 h-[1px] bg-neutral-600"></span>
             <span className="text-[11px] font-medium text-neutral-500 uppercase tracking-[0.2em]">Selected Work</span>
+          </div>
+          <div className="w-full">
+            <ProjectCard
+              title="Presbon Safe"
+              category="NGO Website"
+              imageUrl="/mockup3.jpg"
+              href="/projects/presbon-safe"
+            />
           </div>
           <div className="w-full">
             <ProjectCard
@@ -157,14 +165,6 @@ export default function Home() {
               imageUrl="/Mockkup.jpg"
               imageClassName="scale-[1.15] group-hover:scale-[1.20]"
               href="/projects/air-studios"
-            />
-          </div>
-          <div className="w-full">
-            <ProjectCard
-              title="Muzeyi Yelyen - Portofolio 25"
-              category="Website"
-              imageUrl="/Mockkupv2.jpg"
-              href="/projects/muzeyi-yelyen"
             />
           </div>
         </section>

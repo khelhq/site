@@ -23,9 +23,32 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "presbon-safe",
+    title: "Presbon Safe",
+    category: "NGO Website",
+    imageUrl: "/mockup3.jpg",
+    year: "2026",
+    overview: "Presbon Safe is an NGO championing safer mining practices and sustainable futures in Artisanal and Small-Scale Mining (ASM) communities in Ghana and globally. We built their complete digital platform including news, publications, a donation system powered by Paystack, and a compelling public-facing presence.",
+    challenge: "Creating a digital platform for an NGO that needed to communicate urgency, credibility, and impact while also providing functional tools like news publishing, research publication access, and a seamless donation experience across multiple currencies.",
+    solution: "We designed a mission-driven website with a cinematic hero experience, structured content sections for research and news, and a fully integrated Paystack donation flow supporting GHS, USD, and NGN currencies with preset and custom amounts.",
+    gallery: [
+      "/mkup1.png",
+      "/mkup2.png"
+    ],
+    liveUrl: "https://presbon-web.vercel.app/",
+    client: "Presbon Safe",
+    timeline: "3 Weeks / Q2 2026",
+    whatWeBuilt: "NGO Website, News Platform, Research Publications Hub, Paystack Donation Integration",
+    problem: "Presbon Safe needed a digital platform that could effectively communicate their mission of promoting safe, mercury-free mining practices to a global audience. They required a site that could host news updates, showcase academic research publications, and critically, enable international donations through a reliable payment gateway — all while maintaining the gravitas befitting an organization protecting miners' lives and the environment.",
+    approach: "We built a full-featured Next.js platform anchored by a cinematic, full-bleed hero section with animated statistics to immediately convey impact. The information architecture was structured around three pillars: storytelling (news and press releases with category filtering), credibility (research publications linking to peer-reviewed journals), and action (a custom Paystack-powered donation page with multi-currency support, preset donation tiers, and contextual impact messaging). We used a deep green and gold color palette rooted in the organization's identity, paired with editorial typography to balance authority with approachability.",
+    outcome: "Delivered a comprehensive platform that elevated Presbon Safe's digital presence from non-existent to a professional, globally accessible hub. The integrated Paystack donation system enabled seamless contributions from supporters worldwide, while the research and news sections established Presbon Safe as a credible voice in the ASM sustainability space.",
+    nextProjectSlug: "air-studios",
+    nextProjectTitle: "Air Studios"
+  },
+  {
     slug: "air-studios",
     title: "Air Studios",
-    category: "Website",
+    category: "Agency Website",
     imageUrl: "/Mockkup.jpg",
     year: "2025",
     overview: "Air Studios is a creative studio based in Ghana specializing in illustration, design, and storytelling. They approached us to create a digital platform to showcase their top-tier visual content.",
@@ -47,7 +70,7 @@ export const projects: Project[] = [
   },
   {
     slug: "muzeyi-yelyen",
-    title: "Muzeyi Yelyen - Portofolio 25",
+    title: "Muzeyi Yelyen 25'",
     category: "Website",
     imageUrl: "/Mockkupv2.jpg",
     year: "2025",
@@ -65,8 +88,8 @@ export const projects: Project[] = [
     problem: "Muzeyi Yelyen needed a personal portfolio that felt personal. Traditional portfolio templates felt too sterile and commercial, failing to reflect his deeply organic, storytelling-driven design philosophy and personal writing voice.",
     approach: "We stripped away all unnecessary visual noise, opting for an ultra-minimalist design system with raw typographic accents and smooth, high-fidelity transitions. We treated each page load as the opening of a book, designing custom text-reveal entry animations that ease the user into the narrative. We chose to focus on micro-interactions, making sure the portfolio remains entirely unobtrusive so that the illustration work remains the primary focal point of the browser.",
     outcome: "Shipped a highly personalized portfolio featured on multiple visual design inspiration sites. Muzeyi reported a massive qualitative shift: clients now approach him with a clear understanding of his storytelling methodology, leading to highly aligned, higher-value commissions.",
-    nextProjectSlug: "air-studios",
-    nextProjectTitle: "Air Studios"
+    nextProjectSlug: "presbon-safe",
+    nextProjectTitle: "Presbon Safe"
   }
 ];
 

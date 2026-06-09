@@ -23,11 +23,11 @@ export default function ProjectCard({ title, category, imageUrl, imageClassName,
           className={`object-cover transition-transform duration-1000 ${imageClassName || "group-hover:scale-105"}`}
         />
         <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
         
-        <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 z-10 flex flex-col gap-2 pointer-events-none">
-          <p className="text-white/70 text-[10px] md:text-[11px] font-mono font-medium uppercase tracking-[0.2em]">{category}</p>
-          <h3 className="text-white text-[18px] md:text-[24px] font-manifesto">{title}</h3>
+        <div className="absolute bottom-5 left-5 md:bottom-6 md:left-6 z-10 flex items-baseline gap-2 pointer-events-none">
+          <h3 className="text-white text-[15px] md:text-[17px] font-semibold leading-none">{title}</h3>
+          <p className="text-white/60 text-[13px] md:text-[15px] font-light leading-none">{category}</p>
         </div>
       </div>
     </div>
