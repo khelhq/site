@@ -154,7 +154,7 @@ export default function Home() {
             <ProjectCard
               title="Presbon Safe"
               category="NGO Website"
-              imageUrl="/mockup3.jpg"
+              imageUrl="/mockup3.webp"
               href="/projects/presbon-safe"
             />
           </div>
@@ -162,7 +162,7 @@ export default function Home() {
             <ProjectCard
               title="Air Studios"
               category="Website"
-              imageUrl="/Mockkup.jpg"
+              imageUrl="/Mockkup.webp"
               imageClassName="scale-[1.15] group-hover:scale-[1.20]"
               href="/projects/air-studios"
             />

@@ -108,7 +108,7 @@ export default function ProjectClient({ project }: { project: Project }) {
           </div>
           
           {/* Full-width Hero Image */}
-          <div className="hero-image-wrapper relative w-full aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 shadow-2xl">
+          <div className="hero-image-wrapper relative w-full aspect-[16/9] rounded-2xl overflow-hidden bg-neutral-900 border border-white/10 shadow-2xl">
             <Image
               src={project.imageUrl}
               alt={project.title}
