@@ -102,8 +102,7 @@ export const projects: Project[] = [
     solution: "We developed a minimal, African-based editorial design system that reflects their core values, creating a clean and compelling storytelling platform.",
     gallery: [
       "/ele1.webp",
-      "/ele2.webp",
-      "/ele3.webp"
+      "/ele2.webp"
     ],
     liveUrl: "https://elevat-ed-iota.vercel.app/",
     client: "Elevat-ed",
