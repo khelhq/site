@@ -6,6 +6,6 @@ export const SITE_NAME = "Khel";
 export const DEFAULT_SEO = {
   title: "Khel — We build digital products that work",
   description:
-    "Websites, web apps, automations, and custom software for businesses that mean it. A small collective of developers and engineers based in Ghana.",
+    "Websites, apps, automations & custom software for businesses that mean it. Developers & engineers based in Ghana.",
   ogImage: `${SITE_URL}/og.png`,
 };
