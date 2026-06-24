@@ -1,5 +1,5 @@
 // Central SEO config — update SITE_URL once you have a production domain
-export const SITE_URL = "https://khel.dev"; // TODO: replace with real domain
+export const SITE_URL = "https://khelhq.vercel.app";
 
 export const SITE_NAME = "Khel";
 
